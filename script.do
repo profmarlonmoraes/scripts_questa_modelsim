@@ -1,12 +1,6 @@
-if {! [ file exists work ] } { 
-	echo "criando biblioteca WORK..."
-	echo " "
-} else {
-	echo "apagando biblioteca WORK..."
-	vdel -lib work -all
-	echo "recriando biblioteca WORK..."
-	echo " "
-}
+echo " Prof. Marlon Moraes "
+echo " marlon.moraes@pucrs.br"
+
 vlib work
 vmap work work
 
