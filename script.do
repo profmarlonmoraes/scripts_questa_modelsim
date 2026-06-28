@@ -1,8 +1,20 @@
 echo " Prof. Marlon Moraes "
 echo " marlon.moraes@pucrs.br"
 
-vlib work
-vmap work work
+
+if {! [ file exists work ] } { 
+	echo "criando biblioteca WORK..."
+	vlib work
+	vmap work work
+	echo " "
+} else {
+	echo "apagando biblioteca WORK..."
+	vdel -all
+	echo "recriando biblioteca WORK..."
+	vlib work
+	vmap work work
+	echo " "
+}
 
 ## comando de compilação.
 vlog	./ps2_display7seg.sv
